@@ -2,7 +2,7 @@ import React from 'react'
 import {BiRightArrowAlt} from 'react-icons/bi';
 import shivansh from '../assets/shivansh.png';
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div name="home" className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800'>
    <div className='max-w-screen-lg mx-auto flex flex-col h-full justify-center items-center px-4 md:flex-row'>
@@ -29,6 +29,7 @@ const Home = () => {
     </div>
     <div>
         <img src={shivansh} alt='My Picture' className=' rounded-2xl mx-auto w-2/3 md:w-full'/>
+        <p className='text-white bold font-medium text-center'>{props.name ? props.name : null}</p>
     </div>
    </div>
     </div>
